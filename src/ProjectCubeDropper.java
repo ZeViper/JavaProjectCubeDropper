@@ -1,11 +1,3 @@
-/*
-M2ngu m6te on kukutada kuubikuid yksteise peale, aga kuubik algul liigub, seega peab 6igel ajal seda kukutama
-stack kuubikuid peab kokku saama, et edasi levelites j6uda, kui kukub m66da, on m2ng l2bi.
-
-pean lisama:
-    nupu tekstuurid
-*/
-
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.event.EventHandler;

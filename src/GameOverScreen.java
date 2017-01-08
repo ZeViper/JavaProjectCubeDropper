@@ -1,5 +1,5 @@
 import javafx.scene.canvas.*;
-import javafx.scene.paint.Color;
+import javafx.scene.image.Image;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -17,6 +17,8 @@ public class GameOverScreen {
     Rectangle menuButton1 = new Rectangle( 80, 440, 128, 64 );
     Rectangle menuButton2 = new Rectangle( 240, 440, 128, 64 );
 
+    Image button = new Image("button.png");
+
     public void gameOver (
 
             GraphicsContext gc,
@@ -27,8 +29,8 @@ public class GameOverScreen {
 
         gc.clearRect( 0, 0, canvasWidth, canvasHeight );
 
-        menuButton1.setFill(Color.rgb(0,0,255,0.5));
-        menuButton2.setFill(Color.rgb(255,0,0,0.5));
+        menuButton1.setOpacity( 0 );
+        menuButton2.setOpacity( 0 );
 
         gc.setFont( menuFont1 );
         gc.setLineWidth( 2 );
@@ -44,6 +46,9 @@ public class GameOverScreen {
 
         gc.fillText("Level: " + levelNumber, textPosX, 380);
         gc.strokeText("Level: " + levelNumber, textPosX, 380);
+
+        gc.drawImage( button, 80, 440 );
+        gc.drawImage( button, 240, 440 );
 
         gc.setFont( menuFont3 );
         gc.setLineWidth( 1 );
